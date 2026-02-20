@@ -139,4 +139,3 @@ After renaming a GitHub repository, always:
 
 ---
 
-End of tutorial.
