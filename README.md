@@ -5,24 +5,26 @@ Last updated: 2026-02-20
 
 ---
 
-# 📚 Table of Contents
+## 📚 Table of Contents
 
-1. Repository moved / renamed
-2. Authentication failed (HTTPS / Token issues)
-3. Permission denied (publickey)
-4. Detached HEAD state
-5. Non-fast-forward push rejected
-6. Merge conflicts
-7. Large file push failed
-8. Accidental commit to wrong branch
-9. Undo commits safely
-10. Recover deleted branch
-11. Clean Git cache / re-clone safely
-12. Best Practices Checklist
+1. [Repository moved / renamed](#1-repository-moved--renamed)
+2. [Authentication failed (HTTPS / Token issues)](#2-authentication-failed-https--token-issues)
+3. [Permission denied (publickey)](#3-permission-denied-publickey)
+4. [Detached HEAD state](#4-detached-head-state)
+5. [Non-fast-forward push rejected](#5-non-fast-forward-push-rejected)
+6. [Merge conflicts](#6-merge-conflicts)
+7. [Large file push failed](#7-large-file-push-failed)
+8. [Accidental commit to wrong branch](#8-accidental-commit-to-wrong-branch)
+9. [Undo commits safely](#9-undo-commits-safely)
+10. [Recover deleted branch](#10-recover-deleted-branch)
+11. [Clean Git cache / re-clone safely](#11-clean-git-cache--re-clone-safely)
+12. [Best Practices Checklist](#12-best-practices-checklist)
+13. [Advanced Commands](#advanced-commands)
+14. [Recommended Workflow](#recommended-workflow)
 
 ---
 
-# 1️⃣ Repository Moved / Renamed
+## 1. Repository Moved / Renamed
 
 ### Error
 ```
@@ -38,7 +40,7 @@ git push
 
 ---
 
-# 2️⃣ Authentication Failed (HTTPS)
+## 2. Authentication Failed (HTTPS / Token issues)
 
 ### Error
 ```
@@ -57,7 +59,7 @@ git config --global credential.helper manager
 
 ---
 
-# 3️⃣ Permission Denied (publickey)
+## 3. Permission Denied (publickey)
 
 ### Error
 ```
@@ -84,7 +86,7 @@ ssh -T git@github.com
 
 ---
 
-# 4️⃣ Detached HEAD
+## 4. Detached HEAD state
 
 ### Situation
 You checked out a commit instead of a branch.
@@ -102,7 +104,7 @@ git checkout main
 
 ---
 
-# 5️⃣ Non-Fast-Forward Push Rejected
+## 5. Non-fast-forward push rejected
 
 ### Error
 ```
@@ -122,7 +124,7 @@ git rebase --continue
 
 ---
 
-# 6️⃣ Merge Conflicts
+## 6. Merge conflicts
 
 Check status:
 ```bash
@@ -144,7 +146,7 @@ git commit
 
 ---
 
-# 7️⃣ Large File Push Failed
+## 7. Large file push failed
 
 ### Error
 ```
@@ -161,7 +163,7 @@ git commit -m "Track large files"
 
 ---
 
-# 8️⃣ Committed to Wrong Branch
+## 8. Accidental commit to wrong branch
 
 Move commit:
 ```bash
@@ -177,7 +179,7 @@ git reset --hard HEAD~1
 
 ---
 
-# 9️⃣ Undo Commits Safely
+## 9. Undo commits safely
 
 Keep changes:
 ```bash
@@ -196,7 +198,7 @@ git revert COMMIT_HASH
 
 ---
 
-# 🔟 Recover Deleted Branch
+## 10. Recover deleted branch
 
 ```bash
 git reflog
@@ -205,7 +207,7 @@ git checkout -b recovered_branch HASH
 
 ---
 
-# 1️⃣1️⃣ Clean Re-Clone Strategy
+## 11. Clean Git cache / re-clone safely
 
 ```bash
 cd ..
@@ -215,7 +217,7 @@ git clone REPO_URL
 
 ---
 
-# 1️⃣2️⃣ Best Practices Checklist
+## 12. Best Practices Checklist
 
 ✅ Pull before push  
 ✅ Use branches  
@@ -227,7 +229,7 @@ git clone REPO_URL
 
 ---
 
-# 🧠 Advanced Commands
+## Advanced Commands
 
 ```bash
 git log --oneline --graph --all
@@ -237,7 +239,7 @@ git branch -vv
 
 ---
 
-# 🚀 Recommended Workflow
+## Recommended Workflow
 
 ```bash
 git pull
@@ -249,8 +251,7 @@ git push -u origin feature_x
 
 ---
 
-Most Git problems are reversible.
-Use:
+Most Git problems are reversible. Use:
 
 ```bash
 git status
@@ -258,4 +259,3 @@ git log
 git reflog
 ```
 
-End of Manual
